@@ -1,6 +1,5 @@
 ﻿using DevFreela.API.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Razor.Hosting;
 using Microsoft.Extensions.Options;
 
 // Funcionalidades e pontos de acesso das APIs do projeto.

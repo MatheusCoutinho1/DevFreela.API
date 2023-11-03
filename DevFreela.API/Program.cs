@@ -38,4 +38,11 @@ namespace DevFreela.API
             app.Run();
         }
     }
+
+    //builder.Services.AddSingleton<ExampleClass>(e => new ExampleClass { Name = "Initial Stage" }); = A mesma instância será chamada por todo aplicativo.
+
+    //builder.Services.AddScoped<ExampleClass>(e => new ExampleClass { Name = "Initial Stage" }); = uma instância por requisição.
+
+    //builder.Services.AddTransient<ExampleClass>(e => new ExampleClass { Name = "Initial Stage" }); = Uma instância por classe.
+
 }
