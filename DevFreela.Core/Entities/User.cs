@@ -3,7 +3,7 @@
 namespace DevFreela.Core.Entities
 {
     // User herdará BaseEntity para acessar o ID que foi criado para ser reuilizado em outras classes.
-    internal class User : BaseEntity
+    public class User : BaseEntity
     {
         // Contrutor criado para que quando um usuário novo for criado, ele passe o nome completo, email e data de nascimento.
         // Demais campos serão atualizados diretamente, sem precisar serem preenchidos.
