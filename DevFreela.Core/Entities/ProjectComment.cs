@@ -18,9 +18,11 @@ namespace DevFreela.Core.Entities
 
         // Define o indentficador do projeto.
         public int IdProject { get; private set; }
+        public Project Project { get; private set; }
 
         // Define o ID do usuário que compartilhou o comentário.
         public int IdUser { get; private set; }
+        public User User { get; private set; }
 
         // Define a data de criação do comentário.
         public DateTime CreatedAt { get; private set; }

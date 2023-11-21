@@ -44,6 +44,8 @@ namespace DevFreela.Core.Entities
 
         // Propriedade que define a lista de projetos de cada usuário, em projetos que ele atuou como freelancer.
         public List<Project> FreelanceProjects { get; private set; }
+
+        public List<ProjectComment> Comments { get; private set; }
     }
 
     // Private set é usada para melhorar o encapsulamento da aplicação.

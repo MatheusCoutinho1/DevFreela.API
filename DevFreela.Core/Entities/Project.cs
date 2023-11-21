@@ -30,9 +30,11 @@ namespace DevFreela.Core.Entities
 
         // Propriedade que define a identificação do cliente.
         public int IdClient { get; private set; }
+        public User Client { get; private set; }
 
         // Propriedade que define a identificação do Freelancer.
         public int IdFreelancer { get; private set; }
+        public User Freelancer { get; private set; }
 
         // Propriedade que define o custo total do projeto.
         public decimal TotalCost { get;  private set; }

@@ -15,6 +15,7 @@ namespace DevFreela.Core.Entities
         // Propriedades criadas para mapear uma habilidade para um usuário.
         public int IdUser { get; private set; }
         public int IdSkill { get; private set; }
+        public Skill Skill { get; private set; }
     }
     
     // Private set é usada para melhorar o encapsulamento da aplicação.
