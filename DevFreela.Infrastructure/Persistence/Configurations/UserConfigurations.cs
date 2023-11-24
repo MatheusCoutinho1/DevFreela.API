@@ -10,12 +10,14 @@ namespace DevFreela.Infrastructure.Persistence.Configurations
         {
             builder
             .HasKey(s => s.Id);
+            
 
             builder
                 .HasMany(u => u.Skills)
                 .WithOne()
                 .HasForeignKey(u => u.IdSkill)
                 .OnDelete(DeleteBehavior.Restrict);
+
         }
     }
 }

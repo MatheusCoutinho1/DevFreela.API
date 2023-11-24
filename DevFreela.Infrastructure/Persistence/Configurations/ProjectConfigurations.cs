@@ -10,6 +10,7 @@ namespace DevFreela.Infrastructure.Persistence.Configurations
         {
             builder
             .HasKey(p => p.Id);
+            
 
             builder
                 .HasOne(p => p.Freelancer)
@@ -22,6 +23,7 @@ namespace DevFreela.Infrastructure.Persistence.Configurations
                 .WithMany(f => f.OwnedProjects)
                 .HasForeignKey(p => p.IdClient)
                 .OnDelete(DeleteBehavior.Restrict);
+                
         }
     }
 }

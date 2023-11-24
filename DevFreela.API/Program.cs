@@ -2,6 +2,7 @@ using DevFreela.API.Models;
 using DevFreela.Application.Services.Implementations;
 using DevFreela.Application.Services.Interfaces;
 using DevFreela.Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
 
 namespace DevFreela.API
 {
@@ -15,11 +16,14 @@ namespace DevFreela.API
 
             builder.Services.Configure<OpeningTimeOption>(builder.Configuration.GetSection("OpeningTime"));
 
-            builder.Services.AddSingleton<DevFreelaDbContext>();
+            builder.Services.AddScoped<DevFreelaDbContext>();
 
             builder.Services.AddScoped<IProjectService, ProjectService>();
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<ISkillService, SkillService>();
+
+            var connectionString = builder.Configuration.GetConnectionString("DevFreelaCs");
+            builder.Services.AddDbContext<DevFreelaDbContext>(p => p.UseSqlServer(connectionString));
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

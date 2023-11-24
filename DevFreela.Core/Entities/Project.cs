@@ -17,6 +17,7 @@ namespace DevFreela.Core.Entities
             IdFreelancer = idFreelancer;
             TotalCost = totalCost;
 
+
             CreatedAt = DateTime.Now;
             Status = ProjectStatusEnum.Created;
             Comments = new List<ProjectComment>();
@@ -37,7 +38,7 @@ namespace DevFreela.Core.Entities
         public User Freelancer { get; private set; }
 
         // Propriedade que define o custo total do projeto.
-        public decimal TotalCost { get;  private set; }
+        public decimal TotalCost { get;  set; }
 
         // Propriedade que define a data de cadastro do projeto.
         public DateTime CreatedAt { get; private set; }
