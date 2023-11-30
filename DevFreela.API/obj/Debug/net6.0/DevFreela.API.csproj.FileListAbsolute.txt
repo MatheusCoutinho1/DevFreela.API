@@ -69,3 +69,6 @@ C:\Users\Matheus\Desktop\DevFreela\DevFreela.API\bin\Debug\net6.0\DevFreela.Infr
 C:\Users\Matheus\Desktop\DevFreela\DevFreela.API\bin\Debug\net6.0\DevFreela.Application.pdb
 C:\Users\Matheus\Desktop\DevFreela\DevFreela.API\bin\Debug\net6.0\DevFreela.Core.pdb
 C:\Users\Matheus\Desktop\DevFreela\DevFreela.API\bin\Debug\net6.0\DevFreela.Infrastructure.pdb
+C:\Users\Matheus\Desktop\DevFreela\DevFreela.API\bin\Debug\net6.0\Dapper.dll
+C:\Users\Matheus\Desktop\DevFreela\DevFreela.API\bin\Debug\net6.0\MediatR.dll
+C:\Users\Matheus\Desktop\DevFreela\DevFreela.API\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
