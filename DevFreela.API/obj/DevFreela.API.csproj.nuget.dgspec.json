@@ -137,11 +137,11 @@
           "dependencies": {
             "Dapper": {
               "target": "Package",
-              "version": "[2.0.78, )"
+              "version": "[2.1.24, )"
             },
-            "MediatR.Extensions.Microsoft.DependencyInjection": {
+            "MediatR": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[12.2.0, )"
             }
           },
           "imports": [
@@ -269,6 +269,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.24, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.0, )"
