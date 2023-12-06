@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "5o1nsNhGjDeIjrKSlCq6TwcjH+mPU7vgim9ypTT9S8qddXEERBeZwlblpCc8WnpNINOtoLuNOwHKBLqRLEJFnQ==",
+  "dgSpecHash": "V0hxjgybfBaBe05EugZcYNjtcUbdnznNsGwpEyYsleLIhP7g/7UmP9AJDMoBNJYELBbyfR5uK2WhU9sDuzcA8Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Matheus\\Desktop\\DevFreela\\DevFreela.Application\\DevFreela.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Matheus\\.nuget\\packages\\dapper\\2.1.24\\dapper.2.1.24.nupkg.sha512",
+    "C:\\Users\\Matheus\\.nuget\\packages\\fluentvalidation\\11.8.1\\fluentvalidation.11.8.1.nupkg.sha512",
+    "C:\\Users\\Matheus\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.8.1\\fluentvalidation.dependencyinjectionextensions.11.8.1.nupkg.sha512",
     "C:\\Users\\Matheus\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
     "C:\\Users\\Matheus\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\Matheus\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

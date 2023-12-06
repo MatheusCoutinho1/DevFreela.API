@@ -11,6 +11,8 @@
           "Dapper": "2.1.24",
           "DevFreela.Core": "1.0.0",
           "DevFreela.Infrastructure": "1.0.0",
+          "FluentValidation": "11.8.1",
+          "FluentValidation.DependencyInjectionExtensions": "11.8.1",
           "MediatR": "12.2.0"
         },
         "runtime": {
@@ -22,6 +24,26 @@
           "lib/net5.0/Dapper.dll": {
             "assemblyVersion": "2.0.0.0",
             "fileVersion": "2.1.24.50284"
+          }
+        }
+      },
+      "FluentValidation/11.8.1": {
+        "runtime": {
+          "lib/net6.0/FluentValidation.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.8.1.0"
+          }
+        }
+      },
+      "FluentValidation.DependencyInjectionExtensions/11.8.1": {
+        "dependencies": {
+          "FluentValidation": "11.8.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.8.1.0"
           }
         }
       },
@@ -516,6 +538,20 @@
       "sha512": "sha512-/2t2vsdJyZRsk13AsWigZpsuFvEwK+o3v862cEULXoww905gyKhJFSuwmZI/4Ui9COX9ZCFCI09UHyH4wVYl3A==",
       "path": "dapper/2.1.24",
       "hashPath": "dapper.2.1.24.nupkg.sha512"
+    },
+    "FluentValidation/11.8.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-N72rnlE99XYB7EGA1u9y7m7kNTTynqOPBhZqDE8zr1Y0aSR4t5si94LRA7UVdAV09GaXWCErW+EiFhfbg3DSbg==",
+      "path": "fluentvalidation/11.8.1",
+      "hashPath": "fluentvalidation.11.8.1.nupkg.sha512"
+    },
+    "FluentValidation.DependencyInjectionExtensions/11.8.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Yyme2uCHnf+HawEHUEj7PguR54TPkx1HJT93/POvHT4xONvUrNfLg3Zt2NUAmIbhMjplb6TPLN8DD9AA7B/3QA==",
+      "path": "fluentvalidation.dependencyinjectionextensions/11.8.1",
+      "hashPath": "fluentvalidation.dependencyinjectionextensions.11.8.1.nupkg.sha512"
     },
     "MediatR/12.2.0": {
       "type": "package",
