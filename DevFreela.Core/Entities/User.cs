@@ -1,5 +1,7 @@
 ﻿// Classe criada para mostrar as informações de cada usuário.
 
+using System.Data;
+
 namespace DevFreela.Core.Entities
 {
     // User herdará BaseEntity para acessar o ID que foi criado para ser reuilizado em outras classes.
@@ -7,12 +9,14 @@ namespace DevFreela.Core.Entities
     {
         // Contrutor criado para que quando um usuário novo for criado, ele passe o nome completo, email e data de nascimento.
         // Demais campos serão atualizados diretamente, sem precisar serem preenchidos.
-        public User(string fullName, string email, DateTime birthDate)
+        public User(string fullName, string email, DateTime birthDate, string password, string role)
         {
             FullName = fullName;
             Email = email;
             BirthDate = birthDate;
             Active = true;
+            Password = password;
+            Role = role;
 
             CreatedAt = DateTime.Now;
             Skills = new List<UserSkill>();
@@ -34,6 +38,8 @@ namespace DevFreela.Core.Entities
 
         // Propriedade que define se o usuário está ativo ou não.
         public bool Active { get; private set; }
+        public string Password { get; private set; }
+        public string Role { get; private set; }
 
 
         // Propriedade que define a lista de habilidades de cada usuário.

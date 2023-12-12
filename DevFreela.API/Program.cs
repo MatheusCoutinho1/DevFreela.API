@@ -9,6 +9,9 @@ using DevFreela.Application.Validators;
 using Microsoft.AspNetCore.Identity;
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using DevFreela.Core.Services;
+using DevFreela.Infrastructure.Auth;
+using System.Reflection;
 
 namespace DevFreela.API
 {
@@ -29,14 +32,16 @@ namespace DevFreela.API
             builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
             builder.Services.AddScoped<IUserRepository, UserRepository>();
             builder.Services.AddScoped<ISkillRepository, SkillRepository>();
+            builder.Services.AddScoped<IAuthService, AuthService>();
 
             builder.Services.AddControllers();
 
             builder.Services.AddFluentValidationAutoValidation().AddFluentValidationClientsideAdapters();
             builder.Services.AddValidatorsFromAssemblyContaining<CreateUserCommandValidator>();
 
-            builder.Services.AddMediatR((typeof(CreateProjectCommand).Assembly));
+            builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(CreateProjectCommand).GetTypeInfo().Assembly));
 
+            builder.Services.AddMediatR((typeof(CreateProjectCommand).Assembly));
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();

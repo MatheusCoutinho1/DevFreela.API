@@ -1,5 +1,5 @@
 ﻿using DevFreela.Core.Entities;
-using DevFreela.Core.Repositories;
+using DevFreela.Core.Services;
 using DevFreela.Infrastructure.Persistence;
 using MediatR;
 
@@ -7,17 +7,21 @@ namespace DevFreela.Application.Commands.CreateUser
 {
     public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, int>
     {
-        private readonly IProjectRepository _projectRepository;
-        public CreateUserCommandHandler(IProjectRepository projectRepository)
+        private readonly DevFreelaDbContext _dbContext;
+        private readonly IAuthService _authService;
+        public CreateUserCommandHandler(DevFreelaDbContext dbContext, IAuthService authService)
         {
-            _projectRepository = projectRepository;
+            _dbContext = dbContext;
+            _authService = authService;
         }
 
         public async Task<int> Handle(CreateUserCommand request, CancellationToken cancellationToken)
         {
-            var user = new User(request.FullName, request.Email, request.BirthDate);
+            var passwordHash = _authService.ComputeSha256Hash(request.Password);
+            var user = new User(request.FullName, request.Email, request.BirthDate, passwordHash, request.Role);
 
-            _projectRepository.SaveChangesAsync();
+            await _dbContext.Users.AddAsync(user);
+            await _dbContext.SaveChangesAsync();
 
             return user.Id;
         }
