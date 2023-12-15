@@ -1,7 +1,8 @@
-﻿using DevFreela.API.Models;
-using DevFreela.Application.Commands.CreateUser;
+﻿using DevFreela.Application.Commands.CreateUser;
+using DevFreela.Application.Commands.LoginUser;
 using DevFreela.Application.Queries.GetUser;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // Para cadastrar os pontos de acesso dos usuários.
@@ -35,6 +36,7 @@ namespace DevFreela.API.Controllers
         //api/users
         // Método para cadastrar um novo usuário.
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> Post([FromBody] CreateUserCommand command)
         {
             var id = await _mediator.Send(command);
@@ -44,12 +46,18 @@ namespace DevFreela.API.Controllers
 
         //Método para realiar o login do usuário.
         //api/users/1/login
-        [HttpPut("{id}/login")]
-        public IActionResult Login(int Id, [FromBody] LoginModel login)
+        [HttpPut("login")]
+        [AllowAnonymous]
+        public async Task<IActionResult> Login([FromBody] LoginUserCommand command)
         {
-            // TODO: Para Módulo de Autenticação e Autorização
+            var loginUserviewModel = await _mediator.Send(command);
 
-            return NoContent();
+            if (loginUserviewModel == null)
+            {
+                return BadRequest();
+            }
+
+            return Ok(loginUserviewModel);
         }
     }
 }
