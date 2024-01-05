@@ -23,7 +23,7 @@ namespace DevFreela.API.Controllers
         {
             var query = new GetUserQuery(id);
 
-            var user = await _mediator.Send(id);
+            var user = await _mediator.Send(query);
 
             if (user == null)
             {

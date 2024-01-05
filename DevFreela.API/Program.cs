@@ -12,6 +12,9 @@ using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using DevFreela.Application.Consumers;
+using DevFreela.Infrastructure.MessageBus;
+using DevFreela.Infrastructure.Payments;
 
 namespace DevFreela.API
 {
@@ -22,7 +25,9 @@ namespace DevFreela.API
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-
+            
+            builder.Services.AddControllers(options => options.Filters.Add(typeof(ValidationFilter)))
+            .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateUserCommandValidator>());
 
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -36,8 +41,11 @@ namespace DevFreela.API
             builder.Services.AddScoped<IUserRepository, UserRepository>();
             builder.Services.AddScoped<ISkillRepository, SkillRepository>();
             builder.Services.AddScoped<IAuthService, AuthService>();
+            builder.Services.AddScoped<IPaymentService, PaymentService>();
+            builder.Services.AddScoped<IMessageBusService, MessageBusService>();
+            builder.Services.AddHostedService<PaymentApprovedConsumer>();
 
-            builder.Services.AddControllers(options => options.Filters.Add(typeof(ValidationFilter))).AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateUserCommandValidator>());
+            builder.Services.AddHttpClient();
 
             builder.Services.AddHttpClient();
 

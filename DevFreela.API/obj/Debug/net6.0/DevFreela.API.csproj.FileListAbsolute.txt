@@ -80,3 +80,14 @@ C:\Users\Matheus\Desktop\DevFreela\DevFreela.API\bin\Debug\net6.0\Microsoft.AspN
 C:\Users\Matheus\Desktop\DevFreela\DevFreela.API\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\Matheus\Desktop\DevFreela\DevFreela.API\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\Matheus\Desktop\DevFreela\DevFreela.API\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Matheus\Desktop\DevFreela\DevFreela.API\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Matheus\Desktop\DevFreela\DevFreela.API\bin\Debug\net6.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\Matheus\Desktop\DevFreela\DevFreela.API\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Matheus\Desktop\DevFreela\DevFreela.API\bin\Debug\net6.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\Matheus\Desktop\DevFreela\DevFreela.API\bin\Debug\net6.0\Microsoft.Extensions.Http.dll
+C:\Users\Matheus\Desktop\DevFreela\DevFreela.API\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\Matheus\Desktop\DevFreela\DevFreela.API\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Matheus\Desktop\DevFreela\DevFreela.API\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\Matheus\Desktop\DevFreela\DevFreela.API\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Matheus\Desktop\DevFreela\DevFreela.API\bin\Debug\net6.0\RabbitMQ.Client.dll
+C:\Users\Matheus\Desktop\DevFreela\DevFreela.API\bin\Debug\net6.0\System.Threading.Channels.dll
